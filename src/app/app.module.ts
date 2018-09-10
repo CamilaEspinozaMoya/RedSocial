@@ -7,14 +7,19 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './auth.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { ToolbarComponent } from './toolbar/toolbar.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { BotonMenuTComponent } from './boton-menu-t/boton-menu-t.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent
+    ToolbarComponent,
+    SidenavComponent,
+    BotonMenuTComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,8 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatButtonToggleModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
