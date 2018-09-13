@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
@@ -17,6 +16,7 @@ import { MuroComponent } from './muro/muro.component';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
+import { Observable } from 'rxjs';
 
 @NgModule({
   declarations: [

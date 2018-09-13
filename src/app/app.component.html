@@ -1,3 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-toolbar></app-toolbar>
-<app-sidenav></app-sidenav>
+<app-toolbar *ngIf="!(authService.user | async)">
+</app-toolbar>
+<app-sidenav *ngIf="!(authService.user | async)"></app-sidenav>
