@@ -1,5 +1,5 @@
 <div *ngIf="authService.user | async">
-    <p>Bienvenido : {{(authService.user | async).email}}</p>
+    <p>Bienvenido : {{(((authService.user | async) || {})).email}}</p>
     <button type="button" (click)="onLogout()">Logout</button>
   </div>
   <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
