@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListaCategoriasComponent implements OnInit {
 
+  typesOfFoods: string[] = ['Vegetariana', 'Vegana', 'Repostería', 'Comida sana', 'Comida Extranjera', 'Comida Chilena'];
   constructor() { }
 
   ngOnInit() {
