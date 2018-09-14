@@ -13,19 +13,13 @@ export class AuthService {
     this.user = firebaseAuth.authState;
   }
   signup(email: string, password: string) {
-    this.firebaseAuth
+    return this.firebaseAuth
       .auth
-      .createUserWithEmailAndPassword(email, password)
-      .then(value => {
-        console.log('Se ha registrado con éxito', value);
-      })
-      .catch(err => {
-        console.log('Falló el registro', err.message);
-      });
+      .createUserWithEmailAndPassword(email, password);
   }
 
   login(email: string, password: string) {
-    this.firebaseAuth
+    return this.firebaseAuth
       .auth
       .signInWithEmailAndPassword(email, password)
       .then(value => {
@@ -37,7 +31,7 @@ export class AuthService {
   }
 
   logout() {
-    this.firebaseAuth
+    return this.firebaseAuth
       .auth
       .signOut();
   }

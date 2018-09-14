@@ -32,7 +32,7 @@ export class MuroFormComponent implements OnInit {
     const newMuro = {
       title: this.muroForm.value.title,
       image: this.muroForm.value.image,
-      description: this.muroForm.value.post,
+      post: this.muroForm.value.post,
     };
 
     this.muroList$.push(newMuro);
