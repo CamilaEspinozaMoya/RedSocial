@@ -3,8 +3,8 @@
     <button type="button" (click)="onLogout()">Logout</button>
   </div>
   <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
-    <input type="email" formControlName="email">
-    <input type="password" formControlName="password">
+    <input type="email" formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Contraseña">
     <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
     <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
     <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Log - in</button>
