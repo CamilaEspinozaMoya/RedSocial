@@ -2,4 +2,3 @@
 <mat-button-toggle value="italic" *ngIf="(authService.user | async)">Perfil</mat-button-toggle>
 <mat-button-toggle value="underline" *ngIf="(authService.user | async)">Chat</mat-button-toggle>
 <mat-button-toggle value="underline" (click)="onLogout()" *ngIf="authService.user | async">Cerrar Sesión</mat-button-toggle>
-
