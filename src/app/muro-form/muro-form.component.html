@@ -1,0 +1,19 @@
+<form [formGroup]="muroForm" (ngSubmit)="addMeme()">
+  <p>Título</p>
+  <input #title type="text" formControlName="title">
+  <p *ngIf="muroForm.get('title').errors && muroForm.get('title').errors.required && (muroForm.get('title').dirty || muroForm.get('title').touched)"
+    style="color:red;">Debes escribir un titulo</p>
+  <p>Imagen de la receta</p>
+  <input #image type="text" formControlName="image">
+  <p>Receta</p>
+  <input #description type="text" formControlName="description">
+
+  <button type="submit" [disabled]="!muroForm.valid">
+    ¡Agrega tu receta!
+  </button>
+</form>
+<p>
+  {{muroForm.value | json}}
+  {{muroForm.status}}
+  {{muroForm.get('title').errors | json}}
+</p>

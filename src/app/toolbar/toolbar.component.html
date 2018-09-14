@@ -1,11 +1,3 @@
 <mat-toolbar>
-  <span>Bienvenido {{(authService.user | async)?.email}}</span>
-  <button (click)="signup()" [disabled]="!email || !password">
-      Signup
-    </button>
-  
-    <button (click)="login()" [disabled]="!email || !password">
-      Login
-    </button>
   <app-boton-menu-t></app-boton-menu-t>
 </mat-toolbar>

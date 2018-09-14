@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
-import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthService } from './auth.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -16,7 +16,12 @@ import { MuroComponent } from './muro/muro.component';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
-import { Observable } from 'rxjs';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AuthFormComponent } from './auth-form/auth-form.component';
+import { MuroFormComponent } from './muro-form/muro-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -25,7 +30,9 @@ import { Observable } from 'rxjs';
     SidenavComponent,
     BotonMenuTComponent,
     MuroComponent,
-    ListaCategoriasComponent
+    ListaCategoriasComponent,
+    AuthFormComponent,
+    MuroFormComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,10 @@ import { Observable } from 'rxjs';
     MatListModule,
     MatButtonToggleModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    AngularFireDatabaseModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

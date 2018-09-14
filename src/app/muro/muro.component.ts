@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-muro',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./muro.component.css']
 })
 export class MuroComponent implements OnInit {
-
+  @Input() title: string;
+  @Input() image: string;
+  @Input() post: string;
   constructor() { }
 
   ngOnInit() {
