@@ -1,10 +1,10 @@
 <form [formGroup]="muroForm" (ngSubmit)="addMuro()">
   <p>Título</p>
   <input #title type="text" formControlName="title">
-  <p *ngIf="muroForm.get('title').errors && muroForm.get('title').errors.required && (muroForm.get('title').dirty || muroForm.get('title').touched)"
-    style="color:red;">Debes escribir un titulo</p>
-  <p>Imagen de la receta</p>
+  <p>Imagen</p>
   <input #image type="text" formControlName="image">
+  <p *ngIf="muroForm.get('image').errors && muroForm.get('image').errors.required && (muroForm.get('image').dirty || muroForm.get('image').touched)"
+    style="color:red;">Debes agregar una imagen</p>
   <p>Receta</p>
   <input #post type="text" formControlName="post">
   <button type="submit" [disabled]="!muroForm.valid">
