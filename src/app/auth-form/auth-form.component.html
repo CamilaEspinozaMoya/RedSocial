@@ -1,12 +1,25 @@
 <div *ngIf="authService.user | async">
-    <p>Bienvenido : {{(((authService.user | async) || {})).email}}</p>
-    <button type="button" (click)="onLogout()">Logout</button>
-  </div>
-  <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
+  <p>Bienvenido : {{(((authService.user | async) || {})).email}}</p>
+  <button type="button" (click)="onLogout()">Logout</button>
+</div>
+<form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
+  <div class="form-group">
+
     <input type="email" formControlName="email" placeholder="Email">
     <input type="password" formControlName="password" placeholder="Contraseña">
-    <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
-    <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
-    <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Log - in</button>
+    <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Iniciar Sesión</button>
     <!--Ejecutará onLogin-->
-  </form>
+
+    <p>¿Aún no tienes cuenta?</p>
+    <strong><a href="#" class="badge badge" id="linkRegistro" (click)="show=true">REGÍSTRATE</a></strong>
+    
+    <div class= "registro" *ngIf="show">
+      <input type="text" formControlName="name" placeholder="Nombre Completo">
+      <input type="text" formControlName="date" placeholder="Fecha de nacimiento">
+      <input type="email" formControlName="email" placeholder="Correo electrónico">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+      <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
+    </div>
+    <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
+  </div>
+</form>

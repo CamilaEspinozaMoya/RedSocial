@@ -1,14 +1,18 @@
-<form [formGroup]="muroForm" (ngSubmit)="addMeme()">
+<form [formGroup]="muroForm" (ngSubmit)="addMuro()">
   <p>Título</p>
   <input #title type="text" formControlName="title">
   <p *ngIf="muroForm.get('title').errors && muroForm.get('title').errors.required && (muroForm.get('title').dirty || muroForm.get('title').touched)"
-    style="color:red;">Debes escribir un titulo</p>
-  <p>Imagen de la receta</p>
-  <input #image type="text" formControlName="image">
-  <p>Receta</p>
-  <input #post type="text" formControlName="post">
+    style="color:red;">Debes escribir un título</p>
+
+  <div class="form-group">
+    <input #image type="file" formControlName="image" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+
+
+  <p>Agrega una descripción de tu receta</p>
+  <textarea #post type="text" formControlName="post"></textarea>
   <button type="submit" [disabled]="!muroForm.valid">
-    ¡Agrega tu receta!
+    ¡Publica tu receta!
   </button>
 </form>
 <p>
