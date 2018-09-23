@@ -1,4 +1,12 @@
 #menu {
   display:block;
   margin:auto;
+  background-color: #F8C471;
+}
+
+img {
+  margin: auto;
+  background-size: auto;
+  width: 15%;
+  display: inline;
 }

@@ -48,8 +48,11 @@ export interface Food {
 
 export class SelectOverviewExample {
   foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
+    {value: 'Vegetariana', viewValue: 'Vegetariana'},
+    {value: 'Vegana', viewValue: 'Vegana'},
+    {value: 'Reposteria', viewValue: 'Reposteria'},
+    {value: 'Comida sana', viewValue: 'Comida sana'},
+    {value: 'Comida extranjera', viewValue: 'Comida extranjera'},
+    {value: 'Gourmet', viewValue: 'Gourmet'}
   ];
 }
