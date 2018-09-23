@@ -1,6 +1,7 @@
 <form [formGroup]="muroForm" (ngSubmit)="addMuro()">
   <p>Título</p>
   <input #title type="text" formControlName="title">
+
   <p>Imagen</p>
   <input #image type="text" formControlName="image">
   <p *ngIf="muroForm.get('image').errors && muroForm.get('image').errors.required && (muroForm.get('image').dirty || muroForm.get('image').touched)"
@@ -15,6 +16,11 @@
   </mat-select> 
 </mat-form-field>
   <button type="submit" [disabled]="!muroForm.valid">
-    ¡Agrega tu receta!
+    ¡Publica tu receta!
   </button>
 </form>
+<p>
+  {{muroForm.value | json}}
+  {{muroForm.status}}
+  {{muroForm.get('title').errors | json}}
+</p>

@@ -57,6 +57,7 @@ export class AuthFormComponent implements OnInit {
       });
   }
 
+  
   onLogout() {
     this.authService.logout()
       .then(() => {
