@@ -22,6 +22,9 @@ import { MuroFormComponent } from './muro-form/muro-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MuroFeedComponent } from './muro-feed/muro-feed.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MuroComponent,
     ListaCategoriasComponent,
     AuthFormComponent,
-    MuroFormComponent
+    MuroFormComponent,
+    MuroFeedComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule,
     AngularFireDatabaseModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSelectModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
