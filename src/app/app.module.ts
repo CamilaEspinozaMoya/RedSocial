@@ -22,7 +22,6 @@ import { MuroFormComponent } from './muro-form/muro-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { BotonesPostComponent } from './botones-post/botones-post.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,7 @@ import { BotonesPostComponent } from './botones-post/botones-post.component';
     ListaCategoriasComponent,
     AuthFormComponent,
     MuroFormComponent,
-    BotonesPostComponent
+    
   ],
   imports: [
     BrowserModule,
