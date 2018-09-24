@@ -4,7 +4,7 @@
   <input #title type="text" formControlName="title">
 
   <p>Imagen</p>
-  <input #image type="text" formControlName="image">
+  <input #image type="file" class="form-control-file" formControlName="image">
   <p *ngIf="muroForm.get('image').errors && muroForm.get('image').errors.required && (muroForm.get('image').dirty || muroForm.get('image').touched)"
     style="color:red;">Debes agregar una imagen</p>
   <p>Receta</p>
