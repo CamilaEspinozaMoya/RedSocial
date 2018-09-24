@@ -36,7 +36,7 @@ import {MatSelectModule} from '@angular/material/select';
     ListaCategoriasComponent,
     AuthFormComponent,
     MuroFormComponent,
-    MuroFeedComponent
+    MuroFeedComponent,
   ],
   imports: [
     BrowserModule,
