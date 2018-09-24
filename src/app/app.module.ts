@@ -13,7 +13,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { BotonMenuTComponent } from './boton-menu-t/boton-menu-t.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MuroComponent } from './muro/muro.component';
-import { Component } from '@angular/core';
+//import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -25,6 +25,24 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MuroFeedComponent } from './muro-feed/muro-feed.component';
 import {MatSelectModule} from '@angular/material/select';
 
+const routes: Routes = [
+  {
+    path : '',//si no pone nada es la ruta principal
+    component : MuroFeedComponent
+  },
+  {
+    path: 'feed',
+    component: MuroFeedComponent
+  },
+  {
+    path: 'new',
+    component: MuroFormComponent
+  },
+  {
+    path: 'meme/:id',
+    component: MuroComponent
+  }
+];
 
 @NgModule({
   declarations: [
@@ -55,7 +73,8 @@ import {MatSelectModule} from '@angular/material/select';
     AngularFireDatabaseModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatSelectModule
+    MatSelectModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

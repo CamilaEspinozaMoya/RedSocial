@@ -1,3 +1,4 @@
+<div class="container">
 <form [formGroup]="muroForm" (ngSubmit)="addMuro()">
   <p>Título</p>
   <input #title type="text" formControlName="title">
@@ -19,6 +20,7 @@
     ¡Publica tu receta!
   </button>
 </form>
+</div>
 <p>
   {{muroForm.value | json}}
   {{muroForm.status}}
