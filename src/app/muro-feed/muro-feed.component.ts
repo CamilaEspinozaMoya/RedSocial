@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class MuroFeedComponent implements OnInit {
   muro$: Observable<any>;
   constructor(private database: AngularFireDatabase) {
-    this.muro$ = this.database.list('/memes').valueChanges();
+    this.muro$ = this.database.list('/muro').valueChanges();
   }
 
   ngOnInit() {

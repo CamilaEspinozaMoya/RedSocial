@@ -12,7 +12,7 @@ export class AuthFormComponent implements OnInit {
   authForm: FormGroup;
 
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
+  constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar) {
     this.createAuthForm();
   }
 
@@ -57,7 +57,6 @@ export class AuthFormComponent implements OnInit {
       });
   }
 
-  
   onLogout() {
     this.authService.logout()
       .then(() => {
