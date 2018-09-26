@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { AuthService } from './auth.service';
 import { HttpClient } from '@angular/common/http';
-import { AngularFireStorage } from '@angular/fire/storage';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +13,7 @@ export class AppComponent {
   email: string;
   password: string;
 
-  constructor(public authService: AuthService, private storage: AngularFireStorage) {}
+  constructor(public authService: AuthService) {}
 
   signup() {
     this.authService.signup(this.email, this.password);
