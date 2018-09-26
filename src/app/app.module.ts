@@ -24,10 +24,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MuroFeedComponent } from './muro-feed/muro-feed.component';
 import { MatSelectModule } from '@angular/material/select';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
 
 const routes: Routes = [
   {
-    path : '',//si no pone nada es la ruta principal
+    path : '',
     component : MuroFeedComponent
   },
   {

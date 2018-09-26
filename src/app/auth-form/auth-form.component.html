@@ -1,6 +1,4 @@
-<div *ngIf="authService.user | async">
-  <p>Bienvenido : {{(((authService.user | async) || {})).email}}</p>
-</div>
+<img src="../../assets/image/Sogbu Restaurant Logo (2).jpg" alt="">
 <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
   <div class="form-group">
 
