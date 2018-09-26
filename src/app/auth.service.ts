@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,11 @@ export class AuthService {
   constructor(private firebaseAuth: AngularFireAuth) {
     this.user = firebaseAuth.authState;
   }
+
+  loginGoogle() {
+    return this.firebaseAuth.auth.signInWithPopup( new firebase.auth.GoogleAuthProvider());
+  }
+
   signup(email: string, password: string) {
     return this.firebaseAuth
       .auth
@@ -26,8 +32,13 @@ export class AuthService {
         console.log('Lgin exitoso');
       })
       .catch(err => {
-        console.log('No se pudo log-in', err.message);
+        console.log('No se pudo loguear', err.message);
       });
+  }
+
+  //Obtener los datos del usuario si está logueado
+  getAuth() {
+    return this.firebaseAuth.authState.pipe(map( auth => auth));
   }
 
   logout() {
