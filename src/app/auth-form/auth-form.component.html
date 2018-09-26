@@ -10,25 +10,33 @@
       <input type="password" formControlName="password" placeholder="Contraseña">
       <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Iniciar Sesión</button>
       <!--Ejecutará onLogin-->
+      
+      <p>Ingresa con Facebook:</p>
+      <button type="button" class="btn btn-fb"><i class="fa fa-facebook pr-1"></i> Facebook</button>
+
+      <p>Ingresa con Google:</p>
+      <button type="button" class="btn btn-gplus" (click)="onClickGoogleLogin()"><i class="fa fa-google-plus pr-1"></i> Google </button>
 
       <p>¿Aún no tienes cuenta?</p>
       <strong><a href="#" class="badge badge" id="linkRegistro" (click)="show=true">REGÍSTRATE</a></strong>
     </div>
-    <div class="mx-auto" *ngIf="show" id="registro">
+
+    <div class="registro" *ngIf="show">
       <p>Ingresa tu nombre completo:</p>
       <input type="text" formControlName="name" placeholder="Nombre Completo">
+
       <p>Ingresa tu fecha de nacimiento:</p>
       <input type="text" formControlName="date" placeholder="dd/mm/aaaa">
+      
       <p>Ingresa tu correo electrónico:</p>
       <input type="email" formControlName="email" placeholder="Correo electrónico">
+      
       <p>Crea una contraseña:</p>
       <input type="password" formControlName="password" placeholder="Contraseña">
       <p>Confirma tu contraseña:</p>
       <input type="password" formControlName="confirmPassword" placeholder="Contraseña">
 
       <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
-
-      
     </div>
     <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
   </div>
