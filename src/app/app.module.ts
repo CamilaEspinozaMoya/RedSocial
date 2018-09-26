@@ -24,6 +24,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MuroFeedComponent } from './muro-feed/muro-feed.component';
 import {MatSelectModule} from '@angular/material/select';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+
+
+
 
 
 @NgModule({
@@ -36,7 +40,7 @@ import {MatSelectModule} from '@angular/material/select';
     ListaCategoriasComponent,
     AuthFormComponent,
     MuroFormComponent,
-    MuroFeedComponent,
+    MuroFeedComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +59,8 @@ import {MatSelectModule} from '@angular/material/select';
     AngularFireDatabaseModule,
     ReactiveFormsModule,
     MatSnackBarModule,
-    MatSelectModule
+    MatSelectModule,
+    AngularFireStorageModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
