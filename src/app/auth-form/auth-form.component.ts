@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth-form',
@@ -10,9 +11,12 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class AuthFormComponent implements OnInit {
   authForm: FormGroup;
+  public email: string;
+  public password: string;
 
 
-  constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar) {
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
+
     this.createAuthForm();
   }
 
@@ -69,4 +73,13 @@ export class AuthFormComponent implements OnInit {
           });
       });
   }
+
+  onClickGoogleLogin(){
+    this.authService.loginGoogle()
+    .then((res) => {
+      console.log('Autentificación con Google exitosa');
+      this.router.navigate(['/muro']);
+    }).catch(err => console.log(err.message));
+  }
 }
+

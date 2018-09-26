@@ -13,6 +13,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { BotonMenuTComponent } from './boton-menu-t/boton-menu-t.component';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MuroComponent } from './muro/muro.component';
+import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ListaCategoriasComponent } from './lista-categorias/lista-categorias.component';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
@@ -22,10 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MuroFeedComponent } from './muro-feed/muro-feed.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 import { AngularFireStorageModule } from '@angular/fire/storage';
-
-
 
 
 const routes: Routes = [
