@@ -12,12 +12,6 @@
       <input type="password" formControlName="password" placeholder="Contraseña">
       <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Iniciar Sesión</button>
       <!--Ejecutará onLogin-->
-      
-      <p>Ingresa con Facebook:</p>
-      <button type="button" class="btn btn-fb"><i class="fa fa-facebook pr-1"></i> Facebook</button>
-
-      <p>Ingresa con Google:</p>
-      <button type="button" class="btn btn-gplus" (click)="onClickGoogleLogin()"><i class="fa fa-google-plus pr-1"></i> Google </button>
 
       <p>¿Aún no tienes cuenta?</p>
       <strong><a href="#" class="badge badge" id="linkRegistro" (click)="show=true">REGÍSTRATE</a></strong>
@@ -43,3 +37,9 @@
     <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
   </div>
 </form>
+
+<p>Ingresa con Facebook:</p>
+<button type="button" class="btn btn-fb"><i class="fa fa-facebook pr-1"></i> Facebook</button>
+
+<p>Ingresa con Google:</p>
+<button type="button" class="btn btn-gplus" (click)="onClickGoogleLogin()"><i class="fa fa-google-plus pr-1"></i> Google </button>
