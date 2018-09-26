@@ -1,3 +1,4 @@
+<div class="container">
 <form [formGroup]="muroForm" (ngSubmit)="addMuro()">
   <p>Título</p>
   <input #title type="text" formControlName="title">
@@ -20,4 +21,13 @@
     ¡Publica tu receta!
   </button>
 </form>
+<<<<<<< HEAD
 
+=======
+</div>
+<p>
+  {{muroForm.value | json}}
+  {{muroForm.status}}
+  {{muroForm.get('title').errors | json}}
+</p>
+>>>>>>> 4d26e8a8ae7c7a60fb3d0632d188e307d41523ec
