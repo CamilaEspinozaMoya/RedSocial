@@ -11,6 +11,15 @@ export class MuroFormComponent implements OnInit {
 
   muroForm: FormGroup;
   muroList$: AngularFireList<any>;
+  foods: Food[] = [
+    {value: 'Vegetariana', viewValue: 'Vegetariana'},
+    {value: 'Vegana', viewValue: 'Vegana'},
+    {value: 'Reposteria', viewValue: 'Reposteria'},
+    {value: 'Comida sana', viewValue: 'Comida sana'},
+    {value: 'Comida extranjera', viewValue: 'Comida extranjera'},
+    {value: 'Comida chilena', viewValue: 'Comida chilena'},
+    {value: 'Gourmet', viewValue: 'Gourmet'}
+  ];
 
   constructor(private formBuilder: FormBuilder, private database: AngularFireDatabase) {
     this.createMuroForm();
@@ -44,12 +53,4 @@ export class MuroFormComponent implements OnInit {
 export interface Food {
   value: string;
   viewValue: string;
-}
-
-export class SelectOverviewExample {
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
 }

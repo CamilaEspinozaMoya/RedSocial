@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material';
 })
 export class BotonMenuTComponent implements OnInit {
 
-  constructor(private authService: AuthService, private formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
+  constructor(public authService: AuthService, private formBuilder: FormBuilder, public snackBar: MatSnackBar) { }
 
   ngOnInit() {
   }

@@ -3,5 +3,16 @@ input {
     margin: 10px;
     text-align: center;
     border-radius: 10px;
+    background-color: #F8C471;
 }
 
+img {
+    display:block;
+    margin:auto;
+    background-color: #F8C471;
+}
+
+#registro {
+    display:block;
+    margin:auto;
+}

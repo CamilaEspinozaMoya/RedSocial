@@ -16,6 +16,7 @@ export class AuthFormComponent implements OnInit {
 
 
   constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
+
     this.createAuthForm();
   }
 
@@ -77,8 +78,18 @@ export class AuthFormComponent implements OnInit {
     this.authService.loginGoogle()
     .then((res) => {
       console.log('Autentificación con Google exitosa');
+      console.log(res);
       this.router.navigate(['/muro']);
     }).catch(err => console.log(err.message));
   }
+
+  onClickFacebookLogin() {
+    this.authService.loginFacebook()
+    .then((res) => {
+      console.log(res);
+      this.router.navigate(['/sidenav']);
+    }).catch(err => console.log(err.message));
+  }
+
 }
 

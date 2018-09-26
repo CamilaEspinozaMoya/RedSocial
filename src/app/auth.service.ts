@@ -14,8 +14,12 @@ export class AuthService {
     this.user = firebaseAuth.authState;
   }
 
+  loginFacebook() {
+    return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.FacebookAuthProvider());
+  }
+
   loginGoogle() {
-    return this.firebaseAuth.auth.signInWithPopup( new firebase.auth.GoogleAuthProvider());
+    return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
   signup(email: string, password: string) {
@@ -36,9 +40,10 @@ export class AuthService {
       });
   }
 
+  
   //Obtener los datos del usuario si está logueado
   getAuth() {
-    return this.firebaseAuth.authState.pipe(map( auth => auth));
+    return this.firebaseAuth.authState.pipe(map(auth => auth));
   }
 
   logout() {

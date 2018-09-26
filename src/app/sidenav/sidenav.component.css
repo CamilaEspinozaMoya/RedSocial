@@ -1,4 +1,4 @@
-.example-container {
+.emuro-container {
     width: 100vw;
     height: 100vh;
     margin: 10px;
@@ -7,9 +7,12 @@
 
 #menu {
   width: 30vw;
+  background-color: #F9E79F;
+  height: 100vh;
 }
 
 #muro {
   width: 70vw;
+  height: 100vh;
 }
 
