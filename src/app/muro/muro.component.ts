@@ -9,9 +9,9 @@ export class MuroComponent implements OnInit {
   @Input() title: string;
   @Input() image: string;
   @Input() post: string;
+  @Input() sel: string;
   constructor() { }
 
   ngOnInit() {
   }
-
 }

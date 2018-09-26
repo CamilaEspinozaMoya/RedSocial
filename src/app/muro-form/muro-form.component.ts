@@ -33,7 +33,8 @@ export class MuroFormComponent implements OnInit {
     this.muroForm = this.formBuilder.group({
       title: ['', Validators.required],
       image: ['', Validators.required],
-      post: ['', Validators.required]
+      post: ['', Validators.required],
+      sel: ['', Validators.required],
     });
   }
 
@@ -42,6 +43,7 @@ export class MuroFormComponent implements OnInit {
       title: this.muroForm.value.title,
       image: this.muroForm.value.image,
       post: this.muroForm.value.post,
+      sel: this.muroForm.value.post,
     };
 
     this.muroList$.push(newMuro);

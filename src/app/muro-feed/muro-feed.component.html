@@ -1,3 +1,5 @@
 <app-muro *ngFor="let muro of (muro$ | async)" [title]="muro.title"
           [image]="muro.image"
-          [post]="muro.post"></app-muro>
+          [post]="muro.post"
+          [sel]="muro.post"
+          ></app-muro>
