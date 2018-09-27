@@ -14,7 +14,7 @@ export class MuroFormComponent implements OnInit {
   foods: Food[] = [
     {value: 'Vegetariana', viewValue: 'Vegetariana'},
     {value: 'Vegana', viewValue: 'Vegana'},
-    {value: 'Reposteria', viewValue: 'Reposteria'},
+    {value: 'Reposteria', viewValue: 'Reeria'},
     {value: 'Comida sana', viewValue: 'Comida sana'},
     {value: 'Comida extranjera', viewValue: 'Comida extranjera'},
     {value: 'Comida chilena', viewValue: 'Comida chilena'},
@@ -43,7 +43,7 @@ export class MuroFormComponent implements OnInit {
       title: this.muroForm.value.title,
       image: this.muroForm.value.image,
       post: this.muroForm.value.post,
-      sel: this.muroForm.value.post,
+      sel: this.muroForm.value.sel,
     };
 
     this.muroList$.push(newMuro);

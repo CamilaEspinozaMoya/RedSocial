@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/Redsocial",
+    "public": "dist/RedSocial",
     "ignore": [
       "firebase.json",
       "**/.*",
