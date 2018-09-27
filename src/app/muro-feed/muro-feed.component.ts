@@ -14,6 +14,5 @@ export class MuroFeedComponent implements OnInit {
 
   ngOnInit() {
   }
-  Borrar() { }
-  Editar() { }
+
 }

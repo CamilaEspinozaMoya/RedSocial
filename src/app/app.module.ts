@@ -26,9 +26,6 @@ import { MuroFeedComponent } from './muro-feed/muro-feed.component';
 import { MatSelectModule } from '@angular/material/select';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 
-
-
-
 const routes: Routes = [
   {
     path : '',
@@ -78,7 +75,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatSnackBarModule,
     MatSelectModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
