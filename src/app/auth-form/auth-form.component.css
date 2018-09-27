@@ -16,3 +16,11 @@ img {
     display:block;
     margin:auto;
 }
+
+.fab {
+    padding: 0 12px;
+}
+
+button {
+    text-align: center;
+}
