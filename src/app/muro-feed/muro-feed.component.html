@@ -1,3 +1,4 @@
-<app-muro *ngFor="let muro of (muro$ | async)" [title]="muro.title"
-          [image]="muro.image"
-          [post]="muro.post"></app-muro>
+<div ></div>
+
+<app-muro *ngFor="let muro of (muro$ | async)" [postito]="muro.payload.val()" [key]="muro.payload.key">
+</app-muro>

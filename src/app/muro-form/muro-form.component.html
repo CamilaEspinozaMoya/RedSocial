@@ -10,7 +10,7 @@
   <p>Receta</p>
   <input #post type="text" formControlName="post">
   <mat-form-field > 
-      <mat-select  placeholder= "Selecciona la categoria"> 
+      <mat-select #sel formControlName="sel"  placeholder= "Selecciona la categoria"> 
         <mat-option *ngFor="let food of foods" [value]="food.value">
           {{food.viewValue}}
         </mat-option> 

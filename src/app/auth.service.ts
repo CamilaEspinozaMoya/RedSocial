@@ -40,8 +40,6 @@ export class AuthService {
       });
   }
 
-  
-  //Obtener los datos del usuario si está logueado
   getAuth() {
     return this.firebaseAuth.authState.pipe(map(auth => auth));
   }

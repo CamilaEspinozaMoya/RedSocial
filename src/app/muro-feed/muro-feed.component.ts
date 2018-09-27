@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-muro-feed',
   templateUrl: './muro-feed.component.html',
@@ -10,7 +9,7 @@ import { Observable } from 'rxjs';
 export class MuroFeedComponent implements OnInit {
   muro$: Observable<any>;
   constructor(private database: AngularFireDatabase) {
-    this.muro$ = this.database.list('/muro').valueChanges();
+    this.muro$ = this.database.list('/muro').snapshotChanges();
   }
 
   ngOnInit() {

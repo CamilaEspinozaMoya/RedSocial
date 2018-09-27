@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { AuthService } from './auth.service';
 import { HttpClient } from '@angular/common/http';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -13,7 +16,7 @@ export class AppComponent {
   email: string;
   password: string;
 
-  constructor(public authService: AuthService) {}
+  constructor(private authService: AuthService) {}
 
   signup() {
     this.authService.signup(this.email, this.password);
