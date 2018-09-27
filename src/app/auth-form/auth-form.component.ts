@@ -74,7 +74,7 @@ export class AuthFormComponent implements OnInit {
       });
   }
 
-  onClickGoogleLogin(){
+  onClickGoogleLogin() {
     this.authService.loginGoogle()
     .then((res) => {
       console.log('Autentificación con Google exitosa');
