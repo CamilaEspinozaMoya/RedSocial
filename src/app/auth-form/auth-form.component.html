@@ -1,4 +1,6 @@
 <img src="../../assets/image/Sogbu Restaurant Logo (2).jpg" alt="">
+
+<div class="row">
 <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
   <div class="form-group">
 
@@ -12,7 +14,7 @@
       <!--Ejecutará onLogin-->
 
       <p>¿Aún no tienes cuenta?</p>
-      <strong><a href="#" class="badge badge" id="linkRegistro" (click)="show=true">REGÍSTRATE</a></strong>
+      <strong><a href="#" id="linkRegistro" (click)="show=true">REGÍSTRATE</a></strong>
     </div>
 
     <div class="registro" *ngIf="show">
@@ -21,10 +23,10 @@
 
       <p>Ingresa tu fecha de nacimiento:</p>
       <input type="text" formControlName="date" placeholder="dd/mm/aaaa">
-      
+
       <p>Ingresa tu correo electrónico:</p>
       <input type="email" formControlName="email" placeholder="Correo electrónico">
-      
+
       <p>Crea una contraseña:</p>
       <input type="password" formControlName="password" placeholder="Contraseña">
       <p>Confirma tu contraseña:</p>
@@ -36,8 +38,11 @@
   </div>
 </form>
 
-<p>Ingresa con Facebook:</p>
-<button type="button" class="btn btn-fb"><i class="fa fa-facebook pr-1" (click)="onClickFacebookLogin()"></i> Facebook</button>
+<div *ngIf="!(authService.user | async)">
+  <p>Ingresa con Facebook:</p>
+  <button mat-raised-button color="primary" (click)="onClickFacebookLogin()"><i class="fab fa-facebook-f"></i>Facebook</button>
 
-<p>Ingresa con Google:</p>
-<button type="button" class="btn btn-gplus" (click)="onClickGoogleLogin()"><i class="fa fa-google-plus pr-1"></i> Google </button>
+  <p>Ingresa con Google:</p>
+  <button mat-raised-button color="warn" (click)="onClickGoogleLogin()"><i class="fab fa-google-plus-g"></i>Google</button>
+</div>
+</div>
