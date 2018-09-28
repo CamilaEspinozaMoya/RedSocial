@@ -12,15 +12,15 @@
         <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
           <div class="form-group">
 
-            <div class="login" *ngIf="!show">
+            <div id="login" *ngIf="!show">
               <strong>
-                <p>Inicia sesión:</p>
+                <p>Inicia sesión</p>
               </strong>
               <input type="email" formControlName="email" placeholder="Email">
 
               <input type="password" formControlName="password" placeholder="Contraseña">
 
-              <button mat-stroked-button (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
+              <button mat-stroked-button id="btn-login" (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
               <!--Ejecutará onLogin-->
 
               <div class="row">
