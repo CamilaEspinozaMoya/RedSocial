@@ -25,6 +25,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MuroFeedComponent } from './muro-feed/muro-feed.component';
 import { MatSelectModule } from '@angular/material/select';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { LikeComponent } from './like/like.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
     ListaCategoriasComponent,
     AuthFormComponent,
     MuroFormComponent,
-    MuroFeedComponent
+    MuroFeedComponent,
+    LikeComponent
   ],
   imports: [
     BrowserModule,

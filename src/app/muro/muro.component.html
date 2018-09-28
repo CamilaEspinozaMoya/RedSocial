@@ -1,9 +1,10 @@
 <div class="container">
-<mat-card class="muro-card">
-  <mat-card-header>
-    <p>{{postito.email}}</p>
-    <mat-card-title>{{postito.title}}</mat-card-title>
-  </mat-card-header>
+  <mat-card class="muro-card">
+    <mat-card-header>
+      <p>{{postito.email}}</p>
+      <mat-card-title>{{postito.title}}</mat-card-title>
+    </mat-card-header>
+
 
   <img src="{{postito.image}}">
   <mat-card-content>
@@ -12,12 +13,11 @@
       {{postito.post}}
     </p>
 
-    <button class="btn btn-light" id="btn-trash" (click)="Borrar(key)"><i class="fas fa-trash-alt"></i></button>
+      <button class="btn btn-light" id="btn-trash" (click)="Borrar(key)"><i class="fas fa-trash-alt"></i></button>
 
     <button class="btn btn-light" id="btn-edit"><i class="far fa-edit"></i></button>
 
-    <button class="btn btn-light" id="btn-like" (click)="like()"><i class="fas fa-star"></i></button>
-    
+      <app-like></app-like>
 
   </mat-card-content>
   <mat-card-actions>
