@@ -1,48 +1,74 @@
-<img src="../../assets/image/Sogbu Restaurant Logo (2).jpg" alt="">
-
-<div class="row">
-<form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
-  <div class="form-group">
-
-    <div class="login" *ngIf="!show">
-      <p>Correo electrónico:</p>
-      <input type="email" formControlName="email" placeholder="Email">
-
-      <p>Contraseña:</p>
-      <input type="password" formControlName="password" placeholder="Contraseña">
-      <button type="button" (click)="onLogin()" [disabled]="!authForm.valid">Iniciar Sesión</button>
-      <!--Ejecutará onLogin-->
-
-      <p>¿Aún no tienes cuenta?</p>
-      <strong><a href="#" id="linkRegistro" (click)="show=true">REGÍSTRATE</a></strong>
+<div class="container_back">
+  <div class="row">
+    <div class="col-sm-12 col-md-4 col-lg-4 ">
     </div>
 
-    <div class="registro" *ngIf="show">
-      <p>Ingresa tu nombre completo:</p>
-      <input type="text" formControlName="name" placeholder="Nombre Completo">
+    <div class="col-sm-12 col-md-4 col-lg-4">
+      <img src="../../assets/image/Sogbu Restaurant Logo (2).jpg" class="img-fluid" alt="Responsive image">
 
-      <p>Ingresa tu fecha de nacimiento:</p>
-      <input type="text" formControlName="date" placeholder="dd/mm/aaaa">
+      <div class="container">
+        <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
+          <div class="form-group">
 
-      <p>Ingresa tu correo electrónico:</p>
-      <input type="email" formControlName="email" placeholder="Correo electrónico">
+            <div class="login" *ngIf="!show">
+              <strong>
+                <p>Inicia sesión:</p>
+              </strong>
+              <input type="email" formControlName="email" placeholder="Email">
 
-      <p>Crea una contraseña:</p>
-      <input type="password" formControlName="password" placeholder="Contraseña">
-      <p>Confirma tu contraseña:</p>
-      <input type="password" formControlName="confirmPassword" placeholder="Contraseña">
+              <input type="password" formControlName="password" placeholder="Contraseña">
 
-      <button type="submit" [disabled]="!authForm.valid">Registrarse</button>
+              <button mat-stroked-button (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
+              <!--Ejecutará onLogin-->
+
+              <div class="row">
+                <div class="col-sm-12 col-lg-6">
+                  <button mat-raised-button color="primary" class="btn-block" (click)="onClickFacebookLogin()"><i class="fab fa-facebook-f"></i>Facebook</button>
+                </div>
+
+                <div class="col-sm-12 col-lg-6">
+                  <button mat-raised-button color="warn" class="btn-block" (click)="onClickGoogleLogin()"><i class="fab fa-google-plus-g"></i>Google</button>
+                </div>
+              </div>
+
+              <div id="register-link">
+                <strong>
+                  <p>¿Aún no tienes cuenta?</p>
+                  <button type="button" class="btn btn-link text-danger" id="btn-register" (click)="show=true">REGÍSTRATE</button>
+                </strong>
+              </div>
+            </div>
+
+            <div id="registro" *ngIf="show">
+              <strong><p>Ingresa tu nombre completo:</p></strong>
+              <input type="text" formControlName="name" placeholder="Nombre Completo">
+
+              <strong><p>Ingresa tu fecha de nacimiento:</p></strong>
+              <input type="text" formControlName="date" placeholder="dd/mm/aaaa">
+
+              <strong><p>Ingresa tu correo electrónico:</p></strong>
+              <input type="email" formControlName="email" placeholder="Correo electrónico">
+
+              <strong><p>Crea una contraseña:</p></strong>
+              <input type="password" formControlName="password" placeholder="Contraseña">
+              
+              <strong><p>Confirma tu contraseña:</p></strong>
+              <input type="password" formControlName="confirmPassword" placeholder="Contraseña">
+
+              <button type="button" class="btn btn-link text-danger" id="btn-register" (click)="show2=true"><i class="fas fa-arrow-left"></i>Volver
+                atrás</button>
+
+              <button mat-stroked-button id="register-btn" type="submit" [disabled]="!authForm.valid">Registrarse</button>
+
+            </div>
+            <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
+          </div>
+        </form>
+      </div>
     </div>
-    <!--Ejecutará ngSubmit -> onRegister puesto en la etiqueta form-->
   </div>
-</form>
 
-<div *ngIf="!(authService.user | async)">
-  <p>Ingresa con Facebook:</p>
-  <button mat-raised-button color="primary" (click)="onClickFacebookLogin()"><i class="fab fa-facebook-f"></i>Facebook</button>
+  <div class="ccol-sm-12 col-md-4 col-lg-4 ">
+  </div>
 
-  <p>Ingresa con Google:</p>
-  <button mat-raised-button color="warn" (click)="onClickGoogleLogin()"><i class="fab fa-google-plus-g"></i>Google</button>
-</div>
 </div>

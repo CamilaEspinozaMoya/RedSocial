@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-sidenav',
@@ -9,7 +11,7 @@ import { AngularFireDatabase } from '@angular/fire/database';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor(formBuuilder: FormBuilder, private database: AngularFireDatabase) { }
+  constructor(formBuuilder: FormBuilder, private database: AngularFireDatabase, private authService: AuthService) { }
 
   ngOnInit() {
   }
