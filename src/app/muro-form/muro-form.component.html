@@ -2,7 +2,7 @@
   <form [formGroup]="muroForm" (ngSubmit)="addMuro()">
     <p>Comparte una receta</p>
     <input #title type="text" formControlName="title" placeholder="Agrega un título">
-    <input #image type="file" class="form-control-file" formControlName="image">
+    <input #image type="url" placeholder="Agrega una url" class="form-control-file" formControlName="image">
     <p *ngIf="muroForm.get('image').errors && muroForm.get('image').errors.required && (muroForm.get('image').dirty || muroForm.get('image').touched)"
       style="color:red;">Debes agregar una imagen</p>
     <textarea #post type="text" formControlName="post" placeholder="Ingredientes y preparación"></textarea>

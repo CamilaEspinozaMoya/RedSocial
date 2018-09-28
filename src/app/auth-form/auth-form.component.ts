@@ -14,7 +14,7 @@ export class AuthFormComponent implements OnInit {
   public password: string;
 
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar) {
+  constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar) {
 
     this.createAuthForm();
   }

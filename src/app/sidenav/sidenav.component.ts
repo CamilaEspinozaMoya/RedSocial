@@ -11,7 +11,7 @@ import { AuthService } from '../auth.service';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor(formBuuilder: FormBuilder, private database: AngularFireDatabase, private authService: AuthService) { }
+  constructor(formBuuilder: FormBuilder, private database: AngularFireDatabase, public authService: AuthService) { }
 
   ngOnInit() {
   }
