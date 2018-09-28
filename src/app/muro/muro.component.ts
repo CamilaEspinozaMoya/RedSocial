@@ -24,7 +24,6 @@ export class MuroComponent implements OnInit {
     this.database.object(`muro/${key}`).update();
   }
 
-  
   likeButtonClick(key, numberOfLikes) {
     numberOfLikes++
     this.database.update(key, { likes:  numberOfLikes++ })
