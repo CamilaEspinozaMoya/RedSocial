@@ -1,22 +1,20 @@
 <div class="container">
-<form [formGroup]="muroForm" (ngSubmit)="addMuro()">
-  <p>Título</p>
-  <input #title type="text" formControlName="title">
-
-  <p>Imagen</p>
-  <input #image type="file" class="form-control-file" formControlName="image">
-  <p *ngIf="muroForm.get('image').errors && muroForm.get('image').errors.required && (muroForm.get('image').dirty || muroForm.get('image').touched)"
-    style="color:red;">Debes agregar una imagen</p>
-  <p>Receta</p>
-  <input #post type="text" formControlName="post">
-  <mat-form-field > 
-      <mat-select #sel formControlName="sel"  placeholder= "Selecciona la categoria"> 
+  <form [formGroup]="muroForm" (ngSubmit)="addMuro()">
+    <p>Comparte una receta</p>
+    <input #title type="text" formControlName="title" placeholder="Agrega un título">
+    <input #image type="file" class="form-control-file" formControlName="image">
+    <p *ngIf="muroForm.get('image').errors && muroForm.get('image').errors.required && (muroForm.get('image').dirty || muroForm.get('image').touched)"
+      style="color:red;">Debes agregar una imagen</p>
+    <textarea #post type="text" formControlName="post" placeholder="Ingredientes y preparación"></textarea>
+    <mat-form-field>
+      <mat-select #sel formControlName="sel" placeholder="Selecciona una categoria">
         <mat-option *ngFor="let food of foods" [value]="food.value">
           {{food.viewValue}}
-        </mat-option> 
-      </mat-select> 
+        </mat-option>
+      </mat-select>
     </mat-form-field>
-  <button type="submit" [disabled]="!muroForm.valid">
-    ¡Publica tu receta!
-  </button>
-</form>
+
+    <button type="submit" class="btn btn-warning" [disabled]="!muroForm.valid">
+      ¡Publica tu receta!
+    </button>
+  </form>
