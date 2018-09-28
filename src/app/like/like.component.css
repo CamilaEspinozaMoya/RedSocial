@@ -1,0 +1,11 @@
+#btn-like, #btn-dislike {
+    border-radius: 50%;
+    display: inline;
+    float: right;
+}
+
+p {
+    display: inline;
+    float: right;
+}
+
