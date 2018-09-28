@@ -1,5 +1,6 @@
 <mat-card class="muro-card">
   <mat-card-header>
+    <p>{{postito.email}}</p>
     <mat-card-title>{{postito.title}}</mat-card-title>
   </mat-card-header>
   <img src="{{postito.image}}">
@@ -8,7 +9,7 @@
     <p>
       {{postito.post}}
     </p>
-    <button class="btn btn-sm btn-primary" (click)="Editar()">Editar</button>
+    <button class="btn btn-sm btn-primary" (click)="Editar(key)">Editar</button>
     <button class="btn btn-sm btn-danger" (click)="Borrar(key)">Eliminar</button>
   </mat-card-content>
   <mat-card-actions>
