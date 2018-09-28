@@ -19,7 +19,9 @@ export class MuroComponent implements OnInit {
     this.database.object(`muro/${key}`).remove();
     }
   }
+  
+  /*
   Editar(key) {
     this.database.object(`muro/${key}`).update();
-  }
+  }*/
 }

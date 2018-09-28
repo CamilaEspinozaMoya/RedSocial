@@ -1,9 +1,8 @@
 <div>
-<button mat-icon-button>
+<button mat-icon-button *ngIf="(authService.user | async)">
 <mat-icon>home</mat-icon>
 </button>
 
-<mat-button-toggle value="bold" *ngIf="(authService.user | async)">Home</mat-button-toggle>
 <mat-button-toggle value="italic" *ngIf="(authService.user | async)">Perfil</mat-button-toggle>
 <mat-button-toggle value="underline" *ngIf="(authService.user | async)">Chat</mat-button-toggle>
 <mat-button-toggle value="underline" (click)="onLogout()" *ngIf="authService.user | async">Cerrar Sesión</mat-button-toggle>
