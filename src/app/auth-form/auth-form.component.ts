@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-auth-form',
@@ -15,7 +14,7 @@ export class AuthFormComponent implements OnInit {
   public password: string;
 
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService, public snackBar: MatSnackBar, public router: Router) {
+  constructor(private formBuilder: FormBuilder, public authService: AuthService, public snackBar: MatSnackBar) {
 
     this.createAuthForm();
   }
@@ -79,7 +78,6 @@ export class AuthFormComponent implements OnInit {
     .then((res) => {
       console.log('Autentificación con Google exitosa');
       console.log(res);
-      this.router.navigate(['/muro']);
     }).catch(err => console.log(err.message));
   }
 
@@ -87,7 +85,6 @@ export class AuthFormComponent implements OnInit {
     this.authService.loginFacebook()
     .then((res) => {
       console.log(res);
-      this.router.navigate(['/sidenav']);
     }).catch(err => console.log(err.message));
   }
 

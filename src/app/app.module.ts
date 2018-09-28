@@ -27,25 +27,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { LikeComponent } from './like/like.component';
 
-const routes: Routes = [
-  {
-    path : '',
-    component : MuroFeedComponent
-  },
-  {
-    path: 'feed',
-    component: MuroFeedComponent
-  },
-  {
-    path: 'new',
-    component: MuroFormComponent
-  },
-  {
-    path: 'meme/:id',
-    component: MuroComponent
-  }
-];
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -77,7 +58,6 @@ const routes: Routes = [
     ReactiveFormsModule,
     MatSnackBarModule,
     MatSelectModule,
-    RouterModule.forRoot(routes),
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
