@@ -1,13 +1,12 @@
 <mat-drawer-container *ngIf="(authService.user | async)" class="muro-container" id="muro-container">
 
   <mat-drawer mode="side" opened id="menu">
-    <app-lista-categorias>
-    </app-lista-categorias>
+      <app-muro-form>
+        </app-muro-form>
   </mat-drawer>
 
   <mat-drawer-content id="muro">
-    <app-muro-form>
-    </app-muro-form>
+
 
     <app-muro-feed>
     </app-muro-feed>
