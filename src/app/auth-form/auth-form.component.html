@@ -4,21 +4,23 @@
     </div>
 
     <div class="col-sm-12 col-md-4 col-lg-4">
-      <img src="../../assets/image/Sogbu Restaurant Logo (2).jpg" class="img-fluid" alt="Responsive image">
+      <div *ngIf="!(authService.user | async)">
+        <img src="../../assets/image/Sogbu Restaurant Logo (2).jpg" class="img-fluid" alt="Responsive image">
+      </div>
 
       <div class="container">
         <form [formGroup]="authForm" (ngSubmit)="onRegister()" *ngIf="!(authService.user | async)">
           <div class="form-group">
 
-            <div class="login" *ngIf="!show">
+            <div id="login" *ngIf="!show">
               <strong>
-                <p>Inicia sesión:</p>
+                <p>Inicia sesión</p>
               </strong>
               <input type="email" formControlName="email" placeholder="Email">
 
               <input type="password" formControlName="password" placeholder="Contraseña">
 
-              <button mat-stroked-button (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
+              <button mat-stroked-button id="btn-login" (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
               <!--Ejecutará onLogin-->
 
               <div class="row">
@@ -40,19 +42,29 @@
             </div>
 
             <div id="registro" *ngIf="show">
-              <strong><p>Ingresa tu nombre completo:</p></strong>
+              <strong>
+                <p>Ingresa tu nombre completo:</p>
+              </strong>
               <input type="text" formControlName="name" placeholder="Nombre Completo">
 
-              <strong><p>Ingresa tu fecha de nacimiento:</p></strong>
+              <strong>
+                <p>Ingresa tu fecha de nacimiento:</p>
+              </strong>
               <input type="text" formControlName="date" placeholder="dd/mm/aaaa">
 
-              <strong><p>Ingresa tu correo electrónico:</p></strong>
+              <strong>
+                <p>Ingresa tu correo electrónico:</p>
+              </strong>
               <input type="email" formControlName="email" placeholder="Correo electrónico">
 
-              <strong><p>Crea una contraseña:</p></strong>
+              <strong>
+                <p>Crea una contraseña:</p>
+              </strong>
               <input type="password" formControlName="password" placeholder="Contraseña">
-              
-              <strong><p>Confirma tu contraseña:</p></strong>
+
+              <strong>
+                <p>Confirma tu contraseña:</p>
+              </strong>
               <input type="password" formControlName="confirmPassword" placeholder="Contraseña">
 
               <button type="button" class="btn btn-link text-danger" id="btn-register" (click)="show2=true"><i class="fas fa-arrow-left"></i>Volver

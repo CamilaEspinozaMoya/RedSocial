@@ -1,10 +1,9 @@
-<div>
-<button mat-icon-button>
+<div id="toolbar-btn">
+<button id="home-btn" mat-icon-button *ngIf="(authService.user | async)">
 <mat-icon>home</mat-icon>
 </button>
 
-<mat-button-toggle value="bold" *ngIf="(authService.user | async)">Home</mat-button-toggle>
-<mat-button-toggle value="italic" *ngIf="(authService.user | async)">Perfil</mat-button-toggle>
-<mat-button-toggle value="underline" *ngIf="(authService.user | async)">Chat</mat-button-toggle>
-<mat-button-toggle value="underline" (click)="onLogout()" *ngIf="authService.user | async">Cerrar Sesión</mat-button-toggle>
+<mat-button-toggle id="profile-btn" value="italic" *ngIf="(authService.user | async)">Perfil</mat-button-toggle>
+<mat-button-toggle id="chat-btn" value="underline" *ngIf="(authService.user | async)">Chat</mat-button-toggle>
+<mat-button-toggle id="logout-btn" value="underline" (click)="onLogout()" *ngIf="authService.user | async">Cerrar Sesión</mat-button-toggle>
 </div>

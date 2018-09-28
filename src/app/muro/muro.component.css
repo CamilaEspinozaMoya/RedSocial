@@ -1,0 +1,9 @@
+
+
+#btn-trash, #btn-edit, #btn-like {
+    border-radius: 50%;
+}
+
+#btn-like {
+    float: right;
+}

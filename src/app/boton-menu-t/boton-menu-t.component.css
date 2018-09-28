@@ -1,0 +1,8 @@
+#toolbar-btn {
+    margin-top: 15px;
+}
+
+#home-btn, #profile-btn, #chat-btn, #logout-btn {
+    color: rgb(238, 238, 145);
+    font-weight: bold;
+}
