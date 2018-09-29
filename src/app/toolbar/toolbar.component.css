@@ -4,14 +4,26 @@
   background-color: rgb(204, 9, 9);
 }
 
-img {
+.img-fluid {
   width: 40px;
   height: 40px;
   display: inline;
   margin-top: 10px;
 }
-  
-  #btn {
+
+.rounded-circle {
+  display: inline;
+  width: 45px;
+  height: 45px;
+}
+
+#btn {
   float: right;
+  display: inline;
 }
   
+
+p {
+  color: white;
+  display: inline;
+}

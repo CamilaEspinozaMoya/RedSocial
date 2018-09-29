@@ -58,6 +58,7 @@ import { LikeComponent } from './like/like.component';
     ReactiveFormsModule,
     MatSnackBarModule,
     MatSelectModule,
+    AngularFireStorageModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
