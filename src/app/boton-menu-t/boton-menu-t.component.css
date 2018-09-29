@@ -2,7 +2,21 @@
     margin-top: 15px;
 }
 
-#home-btn, #profile-btn, #chat-btn, #logout-btn {
+#home-btn, #profile-btn, #chat-btn, #bell-btn, #logout-btn {
     color: rgb(238, 238, 145);
     font-weight: bold;
+
+}
+
+.rounded-circle {
+    display: inline;
+    width: 45px;
+    height: 45px;
+    margin-right: 8px;
+}
+
+
+p {
+    color: white;
+    display: inline;
 }

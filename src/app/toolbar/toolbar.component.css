@@ -11,19 +11,10 @@
   margin-top: 10px;
 }
 
-.rounded-circle {
-  display: inline;
-  width: 45px;
-  height: 45px;
-}
+
 
 #btn {
   float: right;
   display: inline;
 }
   
-
-p {
-  color: white;
-  display: inline;
-}

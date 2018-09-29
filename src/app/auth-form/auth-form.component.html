@@ -20,7 +20,7 @@
 
               <input type="password" formControlName="password" placeholder="Contraseña">
 
-              <button mat-stroked-button id="btn-login" (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
+              <button mat-button id="btn-login" (click)="onLogin()" [disabled]="!authForm.valid" id="btn-login">Ingresar</button>
               <!--Ejecutará onLogin-->
 
               <div class="row">
@@ -45,7 +45,7 @@
               <strong>
                 <p>Ingresa tu nombre completo:</p>
               </strong>
-              <input type="text" formControlName="name" placeholder="Nombre Completo">
+              <input type="text" formControlName="name" placeholder="Nombre completo">
 
               <strong>
                 <p>Ingresa tu fecha de nacimiento:</p>
