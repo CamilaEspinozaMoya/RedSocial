@@ -22,12 +22,14 @@ export class AuthService {
     return this.firebaseAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
   }
 
+  // Registro del usuario
   signup(email: string, password: string) {
     return this.firebaseAuth
       .auth
       .createUserWithEmailAndPassword(email, password);
   }
 
+  // Login con email y password
   login(email: string, password: string) {
     return this.firebaseAuth
       .auth
@@ -40,10 +42,12 @@ export class AuthService {
       });
   }
 
+  // Obtener los datos del usuario si está logueado
   getAuth() {
     return this.firebaseAuth.authState.pipe(map(auth => auth));
   }
 
+  // Cerrar sesión
   logout() {
     return this.firebaseAuth
       .auth

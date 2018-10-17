@@ -10,9 +10,9 @@ import { AuthService } from '../auth.service';
 })
 export class ToolbarComponent implements OnInit {
 
+
   constructor(public authService: AuthService) { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
+  
 }

@@ -4,14 +4,17 @@
   background-color: rgb(204, 9, 9);
 }
 
-img {
+.img-fluid {
   width: 40px;
   height: 40px;
   display: inline;
   margin-top: 10px;
 }
-  
-  #btn {
+
+
+
+#btn {
   float: right;
+  display: inline;
 }
   

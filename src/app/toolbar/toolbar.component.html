@@ -1,8 +1,14 @@
-<mat-toolbar *ngIf="(authService.user | async)" id="menu">
-  
-  <img src="../../assets/image/logo2.jpg" class="img-fluid" alt="Responsive image">
+<div class="container-fluid">
+  <mat-toolbar *ngIf="(authService.user | async)" id="menu">
 
-  <div id="btn">
-    <app-boton-menu-t></app-boton-menu-t>
-  </div>
-</mat-toolbar>
+    <img src="../../assets/image/logo2.jpg" class="img-fluid" alt="Responsive image">
+
+    <div id="btn">
+
+      <app-boton-menu-t>
+      </app-boton-menu-t>
+
+    </div>
+  </mat-toolbar>
+
+</div>
